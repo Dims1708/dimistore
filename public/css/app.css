@@ -1,0 +1,92 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100dvh;
+            background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+            color: #333;
+        }
+
+        .form-box {
+            width: 100%;
+            max-width: 450px;
+            padding: 30px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+        }
+        
+        .form-box:hover {
+            border: 3px solid white;
+            border-color: rgba(13, 110, 253, 1);
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid grey;
+            outline: none;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: rgba(13, 110, 253, 1);
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            color: #fff;
+            font-weight: 500;
+            transition: 0,5s;
+        }
+
+        button:hover {
+            background: #6884d3;
+        }
+
+        p {
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 10px;
+            padding-top: 15px;
+        }
+
+        p:hover {
+            text-decoration: underline rgba(13, 110, 253, 1);
+        }
+
+        p a {
+            color: rgba(13, 110, 253, 1);
+            text-decoration: none;
+        }
+
+        p a:hover {
+            text-decoration: underline;
+            color: rgba(13, 110, 253, 1);
+        }
+
+        h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: rgba(13, 110, 253, 1);
+        }
+
+        h4 {
+            font-size: 14px;
+            font-weight: 15px;
+            color: rgba(13, 110, 253, 1);
+        }
+
+        
