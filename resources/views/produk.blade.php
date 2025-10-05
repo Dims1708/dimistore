@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Dimi Store</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
@@ -22,7 +22,7 @@
         body {
             margin: 0px;
             padding: 0px;
-            background: #EEEEEE;
+            background: #4c4c4f;
             background-size: unset;
             color: white;
             font-family: "Alan Sans", sans-serif;
@@ -37,7 +37,7 @@
             line-height: 80px;
             position: sticky;
             top: 0;
-            background: #0D6EFD;
+            background: #37353E;
             z-index: 10;
             padding: 0px 30px;
         }
@@ -48,6 +48,7 @@
             margin: 0px;
             align-content: center;
             list-style: none;
+            color: #00FFE8;
         }
 
         .hamburger {
@@ -82,7 +83,7 @@
             nav.active .auth-buttons {
                 display: flex;
                 flex-direction: column;
-                background: #0D6EFD;
+                background: #37353E;
                 position: absolute;
                 top: 80px;
                 left: 0;
@@ -102,6 +103,7 @@
             border-radius: 6px;
             overflow: hidden;
             cursor: pointer;
+            gap: 10px;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
         }
 
@@ -114,126 +116,69 @@
             caret-color: rgb(255, 81, 0);
         }
 
-        .labelforsearch {
-            cursor: text;
-            background-color: #0D6EFD;
-            padding:0px 25px;
+        .auth-buttons {
+            display: flex;
+            gap: 10px; /* jarak antar tombol */
+        }
+
+            /* Tombol isi */
+        .btn-light {
+            background-color: cyan;
+            color: #37353E;
+            padding: 8px 24px;
+            border-radius: 6px; /* biar kotak agak rounded */
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            border: 2px solid cyan;
+        }
+
+        .btn-light:hover {
+            background-color: #37353E; /* hover neon hijau */
+            color: #00FFE8;
+        }
+
+         /* Tombol outline */
+        .btn-outline-light {
+            border: 2px solid cyan;
+            color: cyan;
+            padding: 8px 24px;
             border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
         }
 
-        .searchIcon {
-            width: 13px;
+        .btn-outline-light:hover {
+            background-color: cyan;
+            color: #1e1e26;
         }
 
-        .border {
-            height: 40%;
-            width: 1.3px;
-            background-color: rgb(223, 223, 223);
+
+        #promo {
+            color: #00FFE8;
         }
 
-        .searchIcon path {
-            fill: white;
+        #product {
+            color: #00FFE8;
         }
 
-        /* button {
-            width: 50px;
-            height: 30px;
-            margin-top: 10px;
-            margin-right: 6px;
-            border-radius: 6px;
-            padding: 0px;
-        } */
-        .btn1 {
-            border: 1px solid white;
-            background-color: white;
-            color: #0D6EFD;
+        #ewallet {
+            color: #00FFE8;
         }
 
-        .btn2 {
-            border: 1px solid white;
-            background-color: transparent;
-            color: white;
+        #pulsa {
+            color: #00FFE8;
         }
 
-        .btn1:hover {
-            border: 1px solid #0D6EFD;
-            background-color: white;
-            text-decoration: underline #0D6EFD;
-        }
-
-        .btn2:hover { 
-            border: 1px solid #0D6EFD;
-        }
-
-        .diskon {
-            color: black;
-        }
-
-        .product {
-            color: black;
+        #voucher {
+            color: #00FFE8;
         }
 
         .bg-custom {
             color: white;
             background-color: rgba(255, 255, 255, 0.187);
             font-size: 18px;
-        }
-        
-        .beli {
-            border: 1px solid #0D6EFD;
-            background-color: #0D6EFD;
-            color: white;
-        }
-        
-        .beli:hover {
-            border: 1px solid #0D6EFD;
-            background-color: white;
-            color: #0D6EFD;
-        }
-
-        .like {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            border: none;
-            background-color: transparent;
-            position: relative;
-
-        }
-
-
-        .like:hover > .icon {
-            transform: scale(1.2);
-            cursor: pointer;
-            transition: .2s linear;
-        }
-
-        .like:focus > .icon {
-            fill: #fd1853;
-            animation: grosseur .2s linear;
-        }
-
-        @keyframes grosseur {
-            0% {
-            width: 50px;
-            height: 50px;
-            fill: #fd1853;
-        }
-
-        100% {
-            width: 30px;
-            height: 30px;
-            fill: #fd1853;
-        }
-        }
-
-        #copyright {
-            text-align: center;
-            width: 100%;
-            padding: 50px 0px 50px 0px;
-            margin-top: 50px;
-            background-color: #0D6EFD;
         }
 
         .label-diskon {
@@ -243,25 +188,108 @@
             width: 80px;
         }
 
+        .card {
+            width: 170px;        /* samakan ukuran card */
+            height: 220px;
+            border: 1px solid none;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            background-color: #37353E;
+            color: #00FFE8;
+        }
+
+        .card:hover {
+            border: 1px solid #00FFE8;
+            transform: scale(1.05);
+            box-shadow: 0px 0px 15px rgba(0, 255, 232, 0.5);
+        }
+
+        .card img {
+            width: 100%;         /* gambar akan menyesuaikan lebar card */
+            height: 150px;       /* tinggi gambar tetap */
+            object-fit: cover;   /* agar gambar tidak gepeng */
+        }
+
+        .card h3{
+            font-size: 15px;
+            font-weight: 600;
+            margin-top: 2px;
+        }
+
+        #copyright {
+            text-align: center;
+            width: 100%;
+            padding-bottom: 5px;            
+            background-color: #37353E;
+            color: #00FFE8;
+        }
+
+        #contact {
+            background: #37353E;
+            padding: 50px 0px 50px 0px;
+        }
+
+        .footer {
+            width: 100%;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+        }
+
+        .footer-section {
+            width: 20%;
+            margin: 0 auto;
+        }
+
+        a {
+            color: #00FFE8;
+            text-decoration: none;
+        }
+
+        ion-icon {
+            color: #00FFE8;
+            font-size: 25px;
+            margin: 0px 10px;
+            text-decoration: none;
+        }
+
+        ion-icon:hover {
+            animation: neonPulse 1.5s infinite alternate;
+        }
+
+        /* Animasi pulse glow */
+        @keyframes neonPulse {
+        0% {
+            filter: drop-shadow(0 0 5px cyan) drop-shadow(0 0 10px cyan);
+            }
+        100% {
+            filter: drop-shadow(0 0 20px cyan) drop-shadow(0 0 40px cyan);
+            }
+        }
+
     </style>
 </head>
 <body>
     <nav>
         <div class="logo">
-            <img src="{{ asset('image/logo.png')}}" width="50px">
+            <img src="{{ asset('image/logo.png')}}" width="150px">
         </div>
 
         <!-- Menu -->
         <ul class="nav-links">
-            <li>Home</li>
-            <li>Discount</li>
-            <li>Category</li>
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#product">Game</a></li>
+            <li><a href="#ewallet">E-Wallet</a></li>
+            <li><a href="#pulsa">Pulsa</a></li>
+            <li><a href="#voucher">Voucher</a></li>
         </ul>
 
         <!-- Button -->
         <div class="auth-buttons">
-            <a href="/" class="btn btn-light">Daftar</a>
-            <a href="/login" class="btn btn-outline-light">Login</a>
+            <a href="/" class="btn-light">Daftar</a>
+            <a href="/login" class="btn-outline-light">Login</a>
         </div>
 
         <!-- Hamburger -->
@@ -294,147 +322,457 @@
         </button>
     </div><br><br>
     
-    <div class="diskon">
-        <div class="container p-2">
-            <h2>Diskon 12.12</h2>
+    {{-- <div class="promo">
+        <div class="container p-3">
+            <h2>Promo Terus</h2>
         </div>
-        <div class="container pt-5 d-flex align-items-start">
+        <div class="container pt-2 d-flex align-items-start">
             <div class="w-100">
                 <div class="row">
-                    <div class="col-md-3">
-                        <div class="card p-2 position-relative"> 
-                            <div class="btn btn-primary label-diskon">12.12</div>
-                            <img src="{{ asset('image/mobilelegends.jpg')}}" class="rounded"><br>
-                            <h3>Product</h3>
-                            <h5>IDR 300.000</h5>
-                            <div class="d-flex">
-                                <button class="btn btn-primary">Beli</button>
-                                <button class="btn">
-                                    <svg class="icon" width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"></path></svg>
-                                </button>
-                            </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/mobilelegends"><img src="{{ asset('image/mobilelegends.jpg')}}" class="rounded"></a><br>
+                            <h3>Mobile Legends</h3>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="card p-2 position-relative"> 
-                            <div class="btn btn-primary label-diskon">12.12</div>
-                            <img src="{{ asset('image/freefire.jpg')}}" class="rounded"><br>
-                            <h3>Product</h3>
-                            <h5>IDR 300.000</h5>
-                            <div class="d-flex">
-                                <button class="btn btn-primary">Beli</button>
-                                <button class="btn">
-                                    <svg class="icon" width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"></path></svg>
-                                </button>
-                            </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/freefire"><img src="{{ asset('image/freefire.jpg')}}" class="rounded"></a><br>
+                            <h3>Free Fire</h3>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="card p-2 position-relative"> 
-                            <div class="btn btn-primary label-diskon">12.12</div>
-                            <img src="{{ asset('image/pubg.jpg')}}"  class="rounded"><br>
-                            <h3>Product</h3>
-                            <h5>IDR 300.000</h5>
-                            <div class="d-flex">
-                                <button class="btn btn-primary">Beli</button>
-                                <button class="btn">
-                                    <svg class="icon" width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"></path></svg>
-                                </button>
-                            </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/coc"><img src="{{ asset('image/coc.jpg')}}"  class="rounded"></a><br>
+                            <h3>Clash Of Clans</h3>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="card p-2 position-relative"> 
-                            <div class="btn btn-primary label-diskon">12.12</div>
-                            <img src="{{ asset('image/coc.jpg')}}" class="rounded"><br>
-                            <h3>Product</h3>
-                            <h5>IDR 300.000</h5>
-                            <div class="d-flex">
-                                <button class="btn btn-primary">Beli</button>
-                                <button class="btn">
-                                    <svg class="icon" width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"></path></svg>
-                                </button>
-                            </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/pubg"><img src="{{ asset('image/pubg.jpg')}}"  class="rounded"></a><br>
+                            <h3>PUBG Mobile</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/pubg"><img src="{{ asset('image/pb.png')}}"  class="rounded"></a><br>
+                            <h3>Point Blank</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/pubg"><img src="{{ asset('image/hok.jpg')}}"  class="rounded"></a><br>
+                            <h3>Honor Of Kings</h3>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div><br><br> --}}
+
+    <div id="product">
+        <div class="container pt-3">
+            <h2>Game</h2>
+        </div>
+        <div class="container pt-2 d-flex align-items-center">
+            <div class="w-100">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/mobilelegends"><img src="{{ asset('image/mobilelegends.jpg')}}" class="rounded"></a><br>
+                            <h3>Mobile Legends</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/freefire"><img src="{{ asset('image/freefire.jpg')}}" class="rounded"></a><br>
+                            <h3>Free Fire</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/coc"><img src="{{ asset('image/coc.jpg')}}"  class="rounded"></a><br>
+                            <h3>Clash Of Clans</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/pubg"><img src="{{ asset('image/pubg.jpg')}}"  class="rounded"></a><br>
+                            <h3>PUBG Mobile</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/pointblank"><img src="{{ asset('image/pb.png')}}"  class="rounded"></a><br>
+                            <h3>Point Blank</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/pubg"><img src="{{ asset('image/hok.jpg')}}"  class="rounded"></a><br>
+                            <h3>Honor Of Kings</h3>
+                        </div>
+                    </div>
+                </div>
+                {{-- <div class="row pt-3">
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/mobilelegends"><img src="{{ asset('image/mobilelegends.jpg')}}" class="rounded"></a><br>
+                            <h3>Mobile Legends</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/freefire"><img src="{{ asset('image/freefire.jpg')}}" class="rounded"></a><br>
+                            <h3>Free Fire</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/coc"><img src="{{ asset('image/coc.jpg')}}"  class="rounded"></a><br>
+                            <h3>Clash Of Clans</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/pubg"><img src="{{ asset('image/pubg.jpg')}}"  class="rounded"></a><br>
+                            <h3>PUBG Mobile</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/pubg"><img src="{{ asset('image/pb.png')}}"  class="rounded"></a><br>
+                            <h3>Point Blank</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/pubg"><img src="{{ asset('image/hok.jpg')}}"  class="rounded"></a><br>
+                            <h3>Honor Of Kings</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-3">
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/mobilelegends"><img src="{{ asset('image/mobilelegends.jpg')}}" class="rounded"></a><br>
+                            <h3>Mobile Legends</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/freefire"><img src="{{ asset('image/freefire.jpg')}}" class="rounded"></a><br>
+                            <h3>Free Fire</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/coc"><img src="{{ asset('image/coc.jpg')}}"  class="rounded"></a><br>
+                            <h3>Clash Of Clans</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/pubg"><img src="{{ asset('image/pubg.jpg')}}"  class="rounded"></a><br>
+                            <h3>PUBG Mobile</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/pubg"><img src="{{ asset('image/pb.png')}}"  class="rounded"></a><br>
+                            <h3>Point Blank</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/pubg"><img src="{{ asset('image/hok.jpg')}}"  class="rounded"></a><br>
+                            <h3>Honor Of Kings</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-3">
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/mobilelegends"><img src="{{ asset('image/mobilelegends.jpg')}}" class="rounded"></a><br>
+                            <h3>Mobile Legends</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/freefire"><img src="{{ asset('image/freefire.jpg')}}" class="rounded"></a><br>
+                            <h3>Free Fire</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/coc"><img src="{{ asset('image/coc.jpg')}}"  class="rounded"></a><br>
+                            <h3>Clash Of Clans</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/pubg"><img src="{{ asset('image/pubg.jpg')}}"  class="rounded"></a><br>
+                            <h3>PUBG Mobile</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/pubg"><img src="{{ asset('image/pb.png')}}"  class="rounded"></a><br>
+                            <h3>Point Blank</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/pubg"><img src="{{ asset('image/hok.jpg')}}"  class="rounded"></a><br>
+                            <h3>Honor Of Kings</h3>
+                        </div>
+                    </div>
+                </div> --}}
+            </div>
+        </div>
+    </div><br><br>
+
+    <div id="ewallet">
+        <div class="container p-3">
+            <h2>E-Wallet</h2>
+        </div>
+        <div class="container pt-2 d-flex align-items-start">
+            <div class="w-100">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/dana"><img src="{{ asset('image/dana.jpg')}}" class="rounded"></a><br>
+                            <h3>Dana</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/ovo"><img src="{{ asset('image/ovo.jpg')}}"  class="rounded"></a><br>
+                            <h3>OVO</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/shopeepay"><img src="{{ asset('image/shopee.png')}}"  class="rounded"></a><br>
+                            <h3>ShopeePay</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/gopay"><img src="{{ asset('image/gopay.jpg')}}"  class="rounded"></a><br>
+                            <h3>Gopay</h3>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div><br><br>
-    <div class="product">
-        <div class="container pt-2">
-            <h2>Product</h2>
+
+    <div id="pulsa">
+        <div class="container p-3">
+            <h2>Pulsa</h2>
         </div>
-        <div class="container pt-5 d-flex align-items-center">
+        <div class="container pt-2 d-flex align-items-start">
             <div class="w-100">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-2">
                         <div class="card p-2">
-                            <img src="{{ asset('image/mobilelegends.jpg')}}" class="rounded"><br>
-                            <h3>Product</h3>
-                            <h5>IDR 300.000</h5>
-                            <div class="d-flex">
-                                <button class="btn btn-primary">Beli</button>
-                                <button class="btn">
-                                    <svg class="icon" width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"></path></svg>
-                                </button>
-                            </div>
+                            <a href="/xl"><img src="{{ asset('image/xl.jpg')}}" class="rounded"></a><br>
+                            <h3>XL Axiata</h3>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-2">
                         <div class="card p-2">
-                            <img src="{{ asset('image/freefire.jpg')}}" class="rounded"><br>
-                            <h3>Product</h3>
-                            <h5>IDR 300.000</h5>
-                            <div class="d-flex">
-                                <button class="btn btn-primary">Beli</button>
-                                <button class="btn">
-                                    <svg class="icon" width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"></path></svg>
-                                </button>
-                            </div>
+                            <a href="/axis"><img src="{{ asset('image/axis.jpg')}}" class="rounded"></a><br>
+                            <h3>Axis</h3>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-2">
                         <div class="card p-2">
-                            <img src="{{ asset('image/coc.jpg')}}"  class="rounded"><br>
-                            <h3>Product</h3>
-                            <h5>IDR 300.000</h5>
-                            <div class="d-flex">
-                                <button class="btn btn-primary">Beli</button>
-                                <button class="btn">
-                                    <svg class="icon" width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"></path></svg>
-                                </button>
-                            </div>
+                            <a href="/telkomsel"><img src="{{ asset('image/telkomsel.jpg')}}"  class="rounded"></a><br>
+                            <h3>Telkomsel</h3>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-2">
                         <div class="card p-2">
-                            <img src="{{ asset('image/pubg.jpg')}}"  class="rounded"><br>
-                            <h3>Product</h3>
-                            <h5>IDR 300.000</h5>
-                            <div class="d-flex">
-                                <button class="btn btn-primary">Beli</button>
-                                <button class="btn">
-                                    <svg class="icon" width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"></path></svg>
-                                </button>
-                            </div>
+                            <a href="/im3"><img src="{{ asset('image/im3.jpg')}}"  class="rounded"></a><br>
+                            <h3>IM3 Ooredoo</h3>
                         </div>
                     </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/three"><img src="{{ asset('image/tri.jpg')}}"  class="rounded"></a><br>
+                            <h3>Three</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/byu"><img src="{{ asset('image/byu.jpg')}}"  class="rounded"></a><br>
+                            <h3>by.U</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-3">
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/smartfren"><img src="{{ asset('image/smartfren.jpg')}}" class="rounded"></a><br>
+                            <h3>Smartfren</h3>
+                        </div>
+                    </div>
+                    {{-- <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/freefire"><img src="{{ asset('image/freefire.jpg')}}" class="rounded"></a><br>
+                            <h3>Free Fire</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/coc"><img src="{{ asset('image/coc.jpg')}}"  class="rounded"></a><br>
+                            <h3>Clash Of Clans</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/pubg"><img src="{{ asset('image/pubg.jpg')}}"  class="rounded"></a><br>
+                            <h3>PUBG Mobile</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/pubg"><img src="{{ asset('image/pb.png')}}"  class="rounded"></a><br>
+                            <h3>Point Blank</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/pubg"><img src="{{ asset('image/hok.jpg')}}"  class="rounded"></a><br>
+                            <h3>Honor Of Kings</h3>
+                        </div>
+                    </div> --}}
+                </div>
+            </div>
+        </div>
+    </div><br><br>
+    
+    <div id="voucher">
+        <div class="container pt-3">
+            <h2>Voucher</h2>
+        </div>
+        <div class="container pt-2 d-flex align-items-center">
+            <div class="w-100">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/pln"><img src="{{ asset('image/pln.png')}}" class="rounded"></a><br>
+                            <h3>Token PLN</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/pointblank"><img src="{{ asset('image/pb.png')}}" class="rounded"></a><br>
+                            <h3>Point Blank</h3>
+                        </div>
+                    </div>
+                    {{-- <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/coc"><img src="{{ asset('image/coc.jpg')}}"  class="rounded"></a><br>
+                            <h3>Clash Of Clans</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/pubg"><img src="{{ asset('image/pubg.jpg')}}"  class="rounded"></a><br>
+                            <h3>PUBG Mobile</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/pubg"><img src="{{ asset('image/pb.png')}}"  class="rounded"></a><br>
+                            <h3>Point Blank</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/pubg"><img src="{{ asset('image/hok.jpg')}}"  class="rounded"></a><br>
+                            <h3>Honor Of Kings</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-3">
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/mobilelegends"><img src="{{ asset('image/mobilelegends.jpg')}}" class="rounded"></a><br>
+                            <h3>Mobile Legends</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/freefire"><img src="{{ asset('image/freefire.jpg')}}" class="rounded"></a><br>
+                            <h3>Free Fire</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/coc"><img src="{{ asset('image/coc.jpg')}}"  class="rounded"></a><br>
+                            <h3>Clash Of Clans</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/pubg"><img src="{{ asset('image/pubg.jpg')}}"  class="rounded"></a><br>
+                            <h3>PUBG Mobile</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/pubg"><img src="{{ asset('image/pb.png')}}"  class="rounded"></a><br>
+                            <h3>Point Blank</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card p-2">
+                            <a href="/pubg"><img src="{{ asset('image/hok.jpg')}}"  class="rounded"></a><br>
+                            <h3>Honor Of Kings</h3>
+                        </div>
+                    </div>
+                </div> --}}
+            </div>
+        </div>
+    </div><br><br>
+
+    
+
+    <div id="copyright">
+        <div id="contact">
+        <div class="wrapper">
+            <div class="footer">
+                <div class="footer-section">
+                    <img src="{{ asset('image/logo.png')}}" width="75%"><br><br>
+                    <p>Menjual berbagai kebutuhan game kamu dan beberapa 
+                        item lainnya seperti E-Wallet, Pulsa, dan Voucher. Aman, Mudah, Terpercaya.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3>Address</h3><br>
+                    <p><a href="https://maps.app.goo.gl/UUi3DdpFDqHBuFKN6" target="_blank">Jl. Slamet Riyadi No.315 Rt 10 / Rw 05 Pucung Kidul, Kroya, Cilacap</a></p>
+                    <p>Kode Pos 53282</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Me</h3><br>
+                    <a href="https://share.google/wo1MMkvYywGhL1rIp"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://wa.me/081770224419"><ion-icon name="logo-whatsapp"></ion-icon></a>
                 </div>
             </div>
         </div>
     </div>
-    <div id="copyright">
-        <div class="footer-section">
-                <h3>Sosial Media</h3><br>
-                <p><b>Instagram</b></p>
-                <p><b>Facebook</b></p>
-                <p><b>Whatsapp</b></p><br>
-        </div>
         <div class="wrapper">
              @2025 <b>Dimi Store</b> Copyright
         </div>
     </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>

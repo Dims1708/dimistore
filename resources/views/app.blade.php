@@ -31,10 +31,12 @@
         
         <div class="row" style="padding:0px !important; margin:0px !important">
             <div class="col-6 d-flex align-items:center" style="padding:0px !important; margin:0px !important">                
-                <img src="{{ asset('image/banner.png')}}" width="100%" alt="poppins">
+                <img src="{{ asset('image/banner1.png')}}" width="100%" alt="poppins">
             </div>
             <div class="col-6 p-3">
-                        <form action="/login">
+                        <form action="{{ route("send_register")}}" method="POST">
+                            @method("POST")
+                            @csrf
                         <h2>Daftar</h2>
                         <h4><span>Username</span></h4>
                         <input type="username" name="username" placeholder="Masukkan Username" required>
@@ -43,18 +45,18 @@
                         <h4><span>Password</span></h4>
                         <input type="password" name="password" placeholder="Masukkan Password" required>
                         <h4><span>Konfirmasi</span></h4>
-                        <input type="password" name="password" placeholder="Konfirmasi Password" required>
-                        <div class="d-flex justify-content-start gap-2">
+                        <input type="password" name="confirmasi_password" placeholder="Konfirmasi Password" required>
+                        {{-- <div class="d-flex justify-content-start gap-2">
                             <input type="checkbox" name="I Agree" style="width:unset !important; margin-bottom:unset !important" id="">
                             <label for="">I Agree</label>
-                        </div>
+                        </div> --}}
                         <button type="submit" name="daftar">Daftar</button>
         
                         </form>
-        
             </div>
-                    <p>Sudah punya akun? <a href="/login">Login</a></p>
         </div>
+        
+        <p>Sudah punya akun? <a href="/login">Login</a></p>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
 

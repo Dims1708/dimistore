@@ -21,7 +21,10 @@
 
     <div class="container pt-5">
         <div class="form-box m-auto active" id="login-form">
-            <form action="/produk">
+            <form action="{{route('send_login')}}" method="POST">
+                @method('POST')
+                @csrf
+
                 <input type="username" name="username" placeholder="Username" style="margin-bottom:0px !important" required><hr>
                 <input type="password" name="password" placeholder="Password" required>
                 <button type="submit" name="login">Login</button>
